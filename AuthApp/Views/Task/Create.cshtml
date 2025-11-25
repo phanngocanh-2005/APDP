@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12">
+                    <form asp-action="Create" method="POST">
+
+                        <div class="mb-3">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control w-100" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="description">Description</label>
+                            <input type="text" name="description" class="form-control w-100" />
+                        </div>
+                        <button type="submit" class="btn btn-outline-success w-100">
+                            Create
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

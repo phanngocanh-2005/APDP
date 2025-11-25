@@ -1,0 +1,37 @@
+﻿
+@model Account
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-xl-12 text-center">
+            <h1>
+                Register
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-xl-4 align-self-center">
+            
+            <form asp-action="RegisterAccount" method="post">
+                <div class="mb-3">
+                   <label asp-for="Username">Username</label>
+                    <input type="text" name="username" asp-for="Username" class="form-control w-100" />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Fullname">Fullname</label>
+                    <input type="text" name="fullname" asp-for="Fullname" class="form-control w-100" />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password">Password</label>
+                    <input type="password" name="password" asp-for="Password" class="form-control w-100" />
+                </div>
+                <button type="submit" class="btn btn-outline-success w-100">
+                    Register
+                </button>
+            </form>
+
+        </div>
+    </div>
+</div>

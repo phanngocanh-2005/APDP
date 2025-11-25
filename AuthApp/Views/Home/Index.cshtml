@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <img src="~/Figure/Btec.png" alt="BTEC" style="width: 150px; margin-top: 10px; margin-bottom: 30px;">
+
+
+    @if(ViewBag.Username == null)
+    {
+        <h1 class="display-4">Student Information Management System </h1>
+        <p>
+            Neu khong co tai khoan, xin vui long
+            <a href="@Url.Action("Index", "Register")"> dang ky</a>.
+        </p>
+        <p>
+            Neu da co tai khoan, xin vui long
+            <a href="@Url.Action("Index", "Login")"> dang nhap</a>.
+        </p>
+    }
+    else
+    {
+        <h1>
+            Welcome @ViewBag.Username
+        </h1>
+        <a href="@Url.Action("Index", "Task")"> Xem nhiem vu</a>
+    }
+
+    @if (@ViewBag.isConnected)
+    {
+        <h1>
+            Connected database
+        </h1>
+    }
+    else
+    {
+        <h1>
+            Couldnt connect to database
+        </h1>
+    }
+
+</div>
